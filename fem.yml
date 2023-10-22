@@ -1,0 +1,25 @@
+- hosts: localhost
+  become: true
+  pre_tasks:
+    - name: reflector my ass
+      pacman:
+        name: reflector
+      tags:
+      - core
+    - name: mirror diz nutz
+      shell: reflector --save /etc/pacman.d/mirrorlist --country Poland --protocol http,https
+    - name: Update pacman
+      pacman:
+        update_cache: yes
+        upgrade: yes
+      tags:
+      - core
+      - term
+      - chad
+  tasks:
+    - include: tasks/git-setup.yml
+    - include: tasks/ssh.yml
+    - include: tasks/dotfiles.yml
+    - include: tasks/term.yml
+    - include: tasks/nvim.yml
+    - include: tasks/productivity.yml

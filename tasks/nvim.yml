@@ -1,0 +1,15 @@
+- name: Install nvim
+  pacman: 
+    name: neovim
+    state: present
+  tags: 
+  - nvim
+  - core
+
+- name: Get Vimmed
+  ansible.builtin.git:
+    repo: 'https://github.com/wishuuu/nvim-pure'
+    dest: ~/.config/nvim
+  tags:
+  - nvim
+  - core

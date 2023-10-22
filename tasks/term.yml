@@ -1,0 +1,29 @@
+- name: Install fish
+  pacman: 
+    name: fish
+    state: present
+  tags: 
+  - term
+  - core
+
+- name: OhMyFish disrepo
+  git:
+    repo: 'https://github.com/oh-my-fish/oh-my-fish.git'
+    dest: ~/.local/share/git/oh-my-fish
+
+- name: OhMyFish disnuts
+  shell:
+    cmd: "bin/install --offline --noninteractive --yes"
+    executable: /usr/bin/fish
+    chdir: ~/.local/share/git/oh-my-fish
+
+- name: OhMyFish disnuts
+  shell: chsh -s /bin/fish
+
+- name: Install tmux
+  pacman: 
+    name: tmux
+    state: present
+  tags: 
+  - term
+  - core
