@@ -1,6 +1,6 @@
 - name: Install packages
   pacman:
-    name: [ "tmux", "wireshark-cli", "wireshark-qt", "fzf", "gimp", "xclip", "screenkey", "tldr", "ripgrep", "lazygit" ]
+    name: [ "tmux", "wireshark-cli", "wireshark-qt", "fzf", "gimp", "xclip", "screenkey", "tldr", "ripgrep", "lazygit", "paru" ]
     state: present
   tags:
     - install
