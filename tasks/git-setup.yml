@@ -1,28 +1,14 @@
-- name: Git personal setup email
+- name: Git setup email
   git_config:
     name: user.email
     scope: global
     value: "ppwiszu@gmail.com"
   tags:
   - git-personal
-- name: Git personal setup name
+- name: Git setup name
   git_config:
     name: user.name
     scope: global
     value: "wishuuu"
   tags:
   - git-personal
-- name: Git CSS setup email
-  git_config:
-    name: user.email
-    scope: global
-    value: "o.wiszowaty@controsystemsoftware.pl"
-  tags:
-  - git-css
-- name: Git CSS setup name
-  git_config:
-    name: user.name
-    scope: global
-    value: "Oskar Wiszowaty"
-  tags:
-  - git-css

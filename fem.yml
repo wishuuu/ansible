@@ -16,10 +16,10 @@
       - core
       - term
       - chad
-  tasks:
-    - include: tasks/git-setup.yml
-    - include: tasks/ssh.yml
-    - include: tasks/dotfiles.yml
-    - include: tasks/term.yml
-    - include: tasks/nvim.yml
-    - include: tasks/productivity.yml
+  ansible.buildin.include_tasks:
+    - file: tasks/git-setup.yml
+    - file: tasks/ssh.yml
+    - file: tasks/dotfiles.yml
+    - file: tasks/term.yml
+    - file: tasks/nvim.yml
+    - file: tasks/productivity.yml
